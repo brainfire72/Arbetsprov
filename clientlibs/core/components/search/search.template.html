@@ -1,0 +1,17 @@
+<div class="search-component">
+    <form>
+        <input placeholder="Search" ng-model="searchQuery" ng-keyup="getKey($event)" ng-focus="onFocus()" ng-blur="onBlur()">
+
+        <ul ng-show="resultList" class="search-result">
+            <li ng-click="setFieldValue($index)" ng-repeat="item in results">{{item}}</li>
+        </ul>
+    </form>
+
+    <ul class="search-history">
+        <li ng-repeat="item in history">
+            <span class="title">{{item.val}}</span>
+            <span class="date">{{ item.date | date : "yyyy-mm-dd HH:mm" }}</span>
+            <span class="remove" ng-click="removeItem($index)">&times;</span>
+        </li>
+    </ul>
+</div>
