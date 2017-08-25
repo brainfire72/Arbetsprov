@@ -9,7 +9,7 @@ angular.
         templateUrl: 'components/logo/logo.template.html',
         controller: function($scope, $http){
             $scope.logo = {
-                url: 'resources/images/logo.swg'
+                url: 'resources/images/logo.svg'
             }
         }
     });
